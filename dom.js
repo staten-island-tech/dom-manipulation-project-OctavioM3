@@ -2,11 +2,14 @@ const DOMSelectors = {
     form: document.querySelector("#form"),
     textinput: document.querySelector(".text-input"),
     h2s: document.querySelectorAll("h2"),
+    box: document.getElementById("back-box"),
 };
 
-document.body.style.backgroundColor = "black";
-document.getElementById("box").style.color = "white";
+function back(background) {
+background.style.backgroundColor = "black";
+};
 
+back(DOMSelectors.box);
 
 DOMSelectors.form.addEventListener("submit", function (event) {
     event.preventDefault();
