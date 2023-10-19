@@ -6,7 +6,7 @@ const DOMSelectors = {
 };
 
 function back(background) {
-background.style.backgroundColor = "black";
+background.style.backgroundColor = "beige";
 };
 
 back(DOMSelectors.box);
