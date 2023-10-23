@@ -1,20 +1,36 @@
 const DOMSelectors = {
-    form: document.querySelector("#form"),
-    textinput: document.querySelector(".text-input"),
+    formName: document.querySelector("#formName"),
+    NameInput: document.querySelector(".name-input"),
     h2s: document.querySelectorAll("h2"),
     box: document.getElementById("back-box"),
 };
 
 function back(background) {
-background.style.backgroundColor = "beige";
+    background.style.backgroundColor = "beige";
 };
 
-back(DOMSelectors.box);
-
-DOMSelectors.form.addEventListener("submit", function (event) {
+DOMSelectors.formName.addEventListener("submit", function (event) {
     event.preventDefault();
-    console.log(DOMSelectors.textinput.value);
+    console.log(DOMSelectors.NameInput.value);
+    const newObj = createAlbum(name);
+    displayObject(newObj);
+    clearInputFields();
     DOMSelectors.h2s.forEach(
-        (el) => el.textContent = DOMSelectors.textinput.value
+        (el) => el.textContent = DOMSelectors.NameInput.value
     );
-});
+    Enter();
+    Remove();
+    Clear();
+    });
+
+    function createAlbum(name) {
+        return {name};
+    };
+
+    function Clear() {
+        DOMSelectors.NameInput.value = "";
+    }
+
+    function Remove(obj) {
+        obj.Remove();
+    }
