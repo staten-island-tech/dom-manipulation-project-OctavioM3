@@ -1,5 +1,4 @@
 #back-box {
-    background-color: beige;
     text-align: center;
 }
 body {
@@ -8,4 +7,7 @@ body {
 h1 {
     color: beige;
     text-align: center;
+}
+h2 {
+    color: antiquewhite;
 }

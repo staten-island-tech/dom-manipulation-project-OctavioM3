@@ -3,6 +3,8 @@ const DOMSelectors = {
     NameInput: document.querySelector(".name-input"),
     h2s: document.querySelectorAll("h2"),
     box: document.getElementById("back-box"),
+    formClear: document.querySelector("#formClear"),
+    Clear: document.getElementById("clear"),
 };
 
 function back(background) {
@@ -12,9 +14,6 @@ function back(background) {
 DOMSelectors.formName.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log(DOMSelectors.NameInput.value);
-    const newObj = createAlbum(name);
-    displayObject(newObj);
-    clearInputFields();
     DOMSelectors.h2s.forEach(
         (el) => el.textContent = DOMSelectors.NameInput.value
     );
@@ -26,11 +25,10 @@ DOMSelectors.formName.addEventListener("submit", function (event) {
     function createAlbum(name) {
         return {name};
     };
-
-    function Clear() {
-        DOMSelectors.NameInput.value = "";
-    }
+DOMSelectors.Clear.addEventListener("click", function () {
+    DOMSelectors.name.value = "";
+});
 
     function Remove(obj) {
         obj.Remove();
-    }
+    };
