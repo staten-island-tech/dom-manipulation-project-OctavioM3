@@ -1,6 +1,7 @@
 const DOMSelectors = {
+    box: document.getElementById("back-box"),
     formName: document.querySelector("#formName"),
-    NameInput: document.querySelector(".name-input"),
+    text: document.querySelector(`#name-input`),
     h2s: document.querySelectorAll("h2"),
     box: document.getElementById("back-box"),
     formClear: document.querySelector("#formClear"),
@@ -14,21 +15,13 @@ function back(background) {
 DOMSelectors.formName.addEventListener("submit", function (event) {
     event.preventDefault();
     console.log(DOMSelectors.NameInput.value);
+    DOMSelectors.box.insertAdjacentHTML("afterward", `<p> ${name-input}</p>`);
     DOMSelectors.h2s.forEach(
         (el) => el.textContent = DOMSelectors.NameInput.value
     );
-    Enter();
-    Remove();
-    Clear();
     });
 
-    function createAlbum(name) {
-        return {name};
-    };
-DOMSelectors.Clear.addEventListener("click", function () {
-    DOMSelectors.name.value = "";
-});
-
-    function Remove(obj) {
-        obj.Remove();
-    };
+DOMSelectors.back-box.insertAdjacentHTML(
+    "beforebegin",
+    'Add text into an HTML file by writing in JS!'
+)
