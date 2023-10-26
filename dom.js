@@ -40,6 +40,5 @@ DOMSelectors.formName.addEventListener("submit", function () {
 });
 
 DOMSelectors.button.addEventListener("click", function () {
-    let text = DOMSelectors.h2s.textContent;
-    text = ""; 
+    
 });
