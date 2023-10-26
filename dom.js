@@ -5,6 +5,7 @@ const DOMSelectors = {
     NameInput: document.querySelector(".name-input"),
     formName: document.querySelector("#formName"),
     submit: document.getElementById("submit"),
+    clear: document.getElementById("clearbox")
 };
 
 function backandtext(background) {
@@ -34,6 +35,11 @@ changes();
 DOMSelectors.formName.addEventListener("submit", function () {
     let input = DOMSelectors.NameInput.value;
     DOMSelectors.box.insertAdjacentHTML("beforeend", `<h2> ${input} </h2>`);
+    console.log(DOMSelectors.NameInput.value);
     DOMSelectors.NameInput.value = "";
 });
-console.log(DOMSelectors.NameInput)
+
+DOMSelectors.button.addEventListener("click", function () {
+    let text = DOMSelectors.h2s.textContent;
+    text = ""; 
+});
