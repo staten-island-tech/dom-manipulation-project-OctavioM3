@@ -1,27 +1,39 @@
 const DOMSelectors = {
-    box: document.getElementById("back-box"),
-    formName: document.querySelector("#formName"),
-    text: document.querySelector(`#name-input`),
+    box: document.getElementById("firstbox"),
     h2s: document.querySelectorAll("h2"),
-    box: document.getElementById("back-box"),
-    formClear: document.querySelector("#formClear"),
-    Clear: document.getElementById("clear"),
+    button: document.getElementById("clear"),
+    NameInput: document.querySelector(".name-input"),
+    formName: document.querySelector("#formName"),
+    submit: document.getElementById("submit"),
 };
 
-function back(background) {
-    background.style.backgroundColor = "beige";
+function backandtext(background) {
+    background.style.backgroundColor = "blue";
 };
 
-DOMSelectors.formName.addEventListener("submit", function (event) {
+DOMSelectors.formName.addEventListener("submit", function(event) {
     event.preventDefault();
-    console.log(DOMSelectors.NameInput.value);
-    DOMSelectors.box.insertAdjacentHTML("afterward", `<p> ${name-input}</p>`);
-    DOMSelectors.h2s.forEach(
-        (el) => el.textContent = DOMSelectors.NameInput.value
-    );
-    });
+    backandtext(DOMSelectors.box);
+});
 
-DOMSelectors.back-box.insertAdjacentHTML(
-    "beforebegin",
-    'Add text into an HTML file by writing in JS!'
-)
+DOMSelectors.box.insertAdjacentHTML(
+    "beforeend",
+    'Rank Then From Best To Worst'
+);
+
+function changes() {
+    let albums = ``;
+    DOMSelectors.h2s.forEach((h2s) => {
+        h2s.addEventListener("click", function () {
+            h2s.textContent = "";
+    });
+    });
+}
+changes();
+
+DOMSelectors.formName.addEventListener("submit", function () {
+    let input = DOMSelectors.NameInput.value;
+    DOMSelectors.box.insertAdjacentHTML("beforeend", `<h2> ${input} </h2>`);
+    DOMSelectors.NameInput.value = "";
+});
+console.log(DOMSelectors.NameInput)

@@ -1,9 +1,10 @@
-#back-box {
+#firstbox {
     text-align: center;
+    color: beige;
 }
 body {
     background-color: black;
-    color: antiquewhite;
+    color: red;
 }
 h1 {
     color: beige;
@@ -11,4 +12,7 @@ h1 {
 }
 h2 {
     color: antiquewhite;
+}
+#secondbox {
+    text-align: center;
 }
