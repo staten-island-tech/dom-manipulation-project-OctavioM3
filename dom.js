@@ -22,16 +22,6 @@ DOMSelectors.box.insertAdjacentHTML(
     'Rank Then From Best To Worst'
 );
 
-function changes() {
-    let albums = ``;
-    DOMSelectors.h2s.forEach((h2s) => {
-        h2s.addEventListener("click", function () {
-            h2s.textContent = "";
-    });
-    });
-}
-changes();
-
 DOMSelectors.formName.addEventListener("submit", function () {
     let input = DOMSelectors.NameInput.value;
     DOMSelectors.box.insertAdjacentHTML("beforeend", `<h2> ${input} </h2>`);
@@ -42,3 +32,4 @@ DOMSelectors.formName.addEventListener("submit", function () {
 DOMSelectors.button.addEventListener("click", function () {
     
 });
+
