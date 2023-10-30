@@ -1,6 +1,6 @@
 const DOMSelectors = {
     box: document.getElementById("firstbox"),
-    h2s: document.querySelectorAll("h2"),
+    l1s: document.querySelectorAll("h1"),
     button: document.getElementById("clear"),
     NameInput: document.querySelector(".name-input"),
     formName: document.querySelector("#formName"),
@@ -24,7 +24,7 @@ DOMSelectors.box.insertAdjacentHTML(
 
 DOMSelectors.formName.addEventListener("submit", function () {
     let input = DOMSelectors.NameInput.value;
-    DOMSelectors.box.insertAdjacentHTML("beforeend", `<h2> ${input} </h2>`);
+    DOMSelectors.box.insertAdjacentHTML("beforeend", `<ol><l1> ${input} </l1></ol>`);
     console.log(DOMSelectors.NameInput.value);
     DOMSelectors.NameInput.value = "";
 });
