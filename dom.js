@@ -1,12 +1,7 @@
 const DOMSelectors = {
     box: document.getElementById("firstbox"),
-    l1s: document.querySelectorAll("l1"),
-    button: document.getElementById("clear"),
     NameInput: document.querySelector(".name-input"),
     formName: document.querySelector("#formName"),
-    submit: document.getElementById("submit"),
-    clear: document.getElementById("clearbox"),
-    ImgInput: document.querySelector(".img-input"),
 };
 
 DOMSelectors.formName.addEventListener("submit", function (event) {
@@ -14,14 +9,12 @@ DOMSelectors.formName.addEventListener("submit", function (event) {
     enter()
     clear()
     clearInputspace()
-})
-
-
+});
 
 function enter() {
     let input = DOMSelectors.NameInput.value;
-    DOMSelectors.box.insertAdjacentHTML("beforeend", `<div><ol><l1> ${input} </l1></ol>
-    <button id="clear">Clear History</button></div>`);
+    DOMSelectors.box.insertAdjacentHTML("beforeend", `<div><ul><li> ${input} </li></ul>
+    <button id="clear">Clear</button></div>`);
 };
 
 function clear() {
@@ -35,7 +28,7 @@ function clear() {
 
 function clearInputspace() {
     DOMSelectors.NameInput.value = "";
-}
+};
 
 
 

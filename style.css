@@ -1,18 +1,14 @@
-#firstbox {
-    text-align: center;
-    color: beige;
-}
 body {
     background-color: black;
-    color: red;
+    color: beige;
+    text-align: center;
+}
+#firstbox {
+    color: black;
+    background-color: antiquewhite;
+    font-size: 150%;
 }
 h1 {
     color: beige;
-    text-align: center;
-}
-h2 {
-    color: antiquewhite;
-}
-#secondbox {
     text-align: center;
 }
