@@ -1,14 +1,16 @@
 body {
-    background-color: black;
-    color: beige;
-    text-align: center;
+  background-color: black;
+  color: beige;
 }
 #firstbox {
-    color: black;
-    background-color: antiquewhite;
-    font-size: 150%;
+  color: black;
+  background-color: antiquewhite;
+  font-size: 150%;
 }
 h1 {
-    color: beige;
-    text-align: center;
+  color: beige;
+  text-align: center;
+}
+#formbox {
+  text-align: center;
 }
